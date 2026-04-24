@@ -6,16 +6,16 @@ function esperar(milissegundos) {// definindo uma função do time da mensagem e
 async function principal() {
   
   mostrarMensagem("sensor 1");
-  await esperar(1000); //coloco em milissegundos 
+  await (1000); //coloco em milissegundos 
   
-  mostrarMensagem("sensor 2");
-  await esperar(2000);
+  mostrarMensagem("sensor 2"); // foi adicionado o awai em cada sensor para que a mensagem no display seja exibida no tempo definido
+  await (2000);
   
   mostrarMensagem ("sensor 3");
-  await esperar(2000);
+  await (2000);
   
   mostrarMensagem("sensor 4");
-  await esperar(1000);
+  await (1000);
 
   // const number = s1  //definindo o valor do sensor 1
   // const number2 = s2  //definindo o valor do sensor 2
@@ -26,7 +26,9 @@ async function principal() {
   const numberSensor = [s1, s2, s3, s4]; //definindo os sensores em um array
   const numberValue = [100, 200, 300, 400]; //definindo os valores dos sensores em um array
   const array1 = numberSensor.concat(numberValue); //definindo um array concatenado dos sensores e seus valores
-  // é um metodo que utilizei para mesclar os arrays para facilitar a leitura e comparados sensores e valores 
+  // é um tipo de array que utilizei para mesclar os arrays para facilitar a leitura e comparados sensores e valores 
+
+
   if (numberValue[0] >= 100) { //definindo a condição do sensor 1
     mostrarMensagem("sensor 1 ativado");
   }
